@@ -1,5 +1,74 @@
 module.exports = {
     block: 'page',
+    title: 'Person BEM',
+    favicon : '/favicon.ico',
+    head : [
+        { elem : 'meta', attrs : { name : 'description', content : '' } },
+        { elem : 'meta', attrs : { name : 'viewport', content : 'width=device-width, initial-scale=1' } },
+        { elem : 'css', url : 'index.min.css' }
+    ],
+    scripts: [{ elem : 'js', url : 'index.min.js' }],
+    content: [
+        {
+            block: 'person',
+            content: [
+                {
+                    elem: 'male',
+                    content: [
+                        {
+                            elem: 'leg',
+                            mods: {side: 'left'},
+                            content: 'Male person leg -- left'
+                        },
+                        {
+                            elem: 'leg',
+                            mods: {side: 'right'},
+                            content: 'Male person leg -- right'
+                        },
+                        {
+                            elem: 'hand',
+                            mods: {side: 'left'},
+                            content: 'Male person hand -- left'
+                        },
+                        {
+                            elem: 'hand',
+                            mods: {side: 'right'},
+                            content: 'Male person hand -- right'
+                        }
+                    ]
+                },
+                {
+                    elem: 'female',
+                    content: [
+                        {
+                            elem: 'leg',
+                            mods: {side: 'left'},
+                            content: 'Female person leg -- left'
+                        },
+                        {
+                            elem: 'leg',
+                            mods: {side: 'right'},
+                            content: 'Female person leg -- right'
+                        },
+                        {
+                            elem: 'hand',
+                            mods: {side: 'left'},
+                            content: 'Female person hand -- left'
+                        },
+                        {
+                            elem: 'hand',
+                            mods: {side: 'right'},
+                            content: 'Female person hand -- right'
+                        }
+                    ]
+                },
+            ]
+        }
+    ]
+};
+
+/* module.exports = {
+    block: 'page',
     title: 'Title of the page',
     favicon: '/favicon.ico',
     head: [
@@ -487,3 +556,4 @@ module.exports = {
         }
     ]
 };
+ */
